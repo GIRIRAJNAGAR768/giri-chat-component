@@ -1,8 +1,8 @@
 {
   "name": "giri-chat-component",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "chat component",
-  "main": "src/index.tsx",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
     "publish": "npm publish --access public"

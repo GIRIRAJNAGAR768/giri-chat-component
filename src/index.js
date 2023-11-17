@@ -16,11 +16,11 @@ import { Colors } from "./constants/colors";
 import { Strings } from "./constants/strings";
 import { MessageType } from "./constants/enums";
 
-const ChatComponent = (props: ChatComponentInterface) => {
+const ChatComponent = props => {
   const { chatHistory, onMessageSend } = props;
 
   const [typedMessage, setTypedMessage] = useState("");
-  let flatListRef: any = React.useRef(null);
+  let flatListRef = React.useRef(null);
 
   //For auto scrolling of chat
   useEffect(() => {
@@ -81,11 +81,8 @@ const ChatComponent = (props: ChatComponentInterface) => {
               style={{
                 ...styles.messageBox,
                 backgroundColor:
-                  item?.type === MessageType.SENT
-                    ? Colors.CHARDONNAY
-                    : "#E5E7E9",
-                alignSelf:
-                  item?.type === MessageType.SENT ? "flex-end" : "flex-start",
+                  item?.type === "SENT" ? Colors.CHARDONNAY : "#E5E7E9",
+                alignSelf: item?.type === "SENT" ? "flex-end" : "flex-start",
               }}
             >
               <Text style={styles.messageTextStyle}>{item?.message}</Text>
@@ -119,6 +116,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.WHITE,
+    padding: 10,
   },
   input: {
     maxHeight: 100,
@@ -131,7 +129,8 @@ const styles = StyleSheet.create({
   },
   messageBox: {
     maxWidth: "70%",
-    padding: 10,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
     borderRadius: 7,
     marginVertical: 10,
   },
