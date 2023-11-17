@@ -1,0 +1,24 @@
+{
+  "name": "giri-chat-component",
+  "version": "1.0.0",
+  "description": "chat component",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "publish": "npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GIRIRAJNAGAR768/giri-chat-component.git"
+  },
+  "author": "Giriraj Nagar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GIRIRAJNAGAR768/giri-chat-component/issues"
+  },
+  "homepage": "https://github.com/GIRIRAJNAGAR768/giri-chat-component#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-native": "^0.72.7"
+  }
+}
