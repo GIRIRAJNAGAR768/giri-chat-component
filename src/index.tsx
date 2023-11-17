@@ -58,7 +58,7 @@ const ChatComponent = (props: ChatComponentInterface) => {
           }}
         >
           <Image
-            source={require("../images/send_message_icon.png")}
+            source={require("./images/send_message_icon.png")}
             style={styles.sendIconStyle}
           />
         </TouchableOpacity>

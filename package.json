@@ -1,6 +1,6 @@
 {
   "name": "giri-chat-component",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "chat component",
   "main": "src/index.tsx",
   "scripts": {
