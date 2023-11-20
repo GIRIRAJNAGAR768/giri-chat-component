@@ -99,6 +99,10 @@ interface ChatComponentInterface {
 
 ```
 
-# importing the component
+# Page screenshot
+
+<p align="center">
+  <img alt="react-native-paper" src="./src/images/screen.png" width="300">
+</p>
 
  
