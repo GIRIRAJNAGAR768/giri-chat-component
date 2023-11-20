@@ -11,13 +11,17 @@ import {
   View,
 } from "react-native";
 import React, { useEffect, useState } from "react";
-import { ChatComponentInterface } from "./constants/interfaces";
 import { Colors } from "./constants/colors";
 import { Strings } from "./constants/strings";
-import { MessageType } from "./constants/enums";
 
 const ChatComponent = props => {
-  const { chatHistory, onMessageSend } = props;
+  const {
+    chatHistory,
+    onMessageSend,
+    headerContainerStyle,
+    headerTitleStyle,
+    headerTitle,
+  } = props;
 
   const [typedMessage, setTypedMessage] = useState("");
   let flatListRef = React.useRef(null);
@@ -68,8 +72,10 @@ const ChatComponent = props => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.headerContainer}>
-        <Text style={styles.headerTitleStyle}>{"Chat with..."}</Text>
+      <View style={[styles.headerContainer, headerContainerStyle]}>
+        <Text style={[styles.headerTitleStyle, headerTitleStyle]}>
+          {headerTitle}
+        </Text>
       </View>
       <FlatList
         ref={flatListRef}
