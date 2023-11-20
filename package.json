@@ -1,6 +1,6 @@
 {
   "name": "giri-chat-component",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "chat component",
   "main": "src/index.js",
   "scripts": {
@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/GIRIRAJNAGAR768/giri-chat-component#readme",
   "dependencies": {
-    "react": "^18.2.34",
-    "react-dom": "^18.2.14",
-    "react-native": "^0.72.5"
+    "@types/react": "^18.2.34",
+    "@types/react-dom": "^18.2.14",
+    "@types/react-native": "^0.72.5"
   }
 }
