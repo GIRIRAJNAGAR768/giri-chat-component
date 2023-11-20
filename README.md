@@ -25,10 +25,12 @@ import ChatComponent from 'giri-chat-component';
 Complete code
 
 ```js
+import React, {useState} from 'react';
 import ChatComponent from 'giri-chat-component';
 
-//state for chat history updation
- const [chatHistory, setChatHistory] = useState([
+const App = () => {
+  //state for chat history updation
+  const [chatHistory, setChatHistory] = useState([
     {
       type: 'RECEIVED',
       message: 'Hellow',
@@ -36,7 +38,7 @@ import ChatComponent from 'giri-chat-component';
     },
   ]);
 
-//function to trigger receive message by default after 1 sec of sending the message
+  //function to trigger receive message by default after 1 sec of sending the message
   const onAutoReceive = () => {
     setTimeout(() => {
       const newChat = {
@@ -48,25 +50,31 @@ import ChatComponent from 'giri-chat-component';
     }, 1000);
   };
 
-<ChatComponent
-    headerTitle={'Chating with Giri'}
-    headerContainerStyle={{
+  return (
+    <ChatComponent
+      headerTitle={'Chating with Giri'}
+      headerContainerStyle={{
         backgroundColor: 'black',
-    }}
-    headerTitleStyle={{
+      }}
+      headerTitleStyle={{
         color: 'white',
-    }}
-    chatHistory={chatHistory}
-    onMessageSend={message => {
+      }}
+      chatHistory={chatHistory}
+      onMessageSend={message => {
         const newChat = {
-            type: 'SENT',
-            message: message,
-            timestamp: new Date(),
+          type: 'SENT',
+          message: message,
+          timestamp: new Date(),
         };
         setChatHistory([...chatHistory, newChat]);
         onAutoReceive();
-    }}
-/>
+      }}
+    />
+  );
+};
+
+export default App;
+
                 
 ```
 
